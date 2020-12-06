@@ -1,12 +1,12 @@
 <nav>
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo right">Logo</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <a href="http://localhost:3000/src/" class="brand-logo right">Logo</a>
+        <ul id="nav-mobile" class="left">
             <?php
             $menu = array(
-                "Equipes" => "php/teams.php",
-                "Classement" => "php/ranking.php",
-                "Rencontres" => "php/matches.php"
+                "Equipes" => "http://localhost:3000/src/php/teams.php",
+                "Rencontres" => "http://localhost:3000/src/php/matches.php",
+                "Classement" => "http://localhost:3000/src/php/ranking.php"
             );
             foreach ($menu as $page => $link) {
                 echo '<li><a href="' . $link . '">' . $page . '</a></li>';
