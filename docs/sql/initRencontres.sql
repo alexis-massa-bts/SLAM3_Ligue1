@@ -20,10 +20,10 @@ begin
 	stmt:='';
 	stmtRencontre:='';
 	nbDecal:=1;
-	raise notice '%', arrEq;
+	--raise notice '%', arrEq;
 	--BOUCLE DECALAGE
 	while nbDecal < array_length(arrEq, 1) loop
-		raise notice '----------------- % --------------------', nbDecal;
+		--raise notice '----------------- % --------------------', nbDecal;
 		i:=1;
 		j:= array_length(arrEq,1);
 		while i < j loop
@@ -32,8 +32,8 @@ begin
 				eqB := arrEq[j];
 				--raise notice '%, %, %', eqA, eqB, firstDay;
 				stmtRencontre := 'insert into rencontre (id_domicile, id_visiteur, date_match,score_domicile, score_visiteur, arbitre, etat) values (' || eqA || ',' || eqB || ',''' ||  firstDay || ''', 0, 0, '''', ''à venir'');';
-				raise notice '%', stmtRencontre;
-				--execute stmtRencontre;
+				--raise notice '%', stmtRencontre;
+				execute stmtRencontre;
 				stmt := stmt || chr(10) || stmtRencontre;
 				i:=i+1;
 				j:=j-1;

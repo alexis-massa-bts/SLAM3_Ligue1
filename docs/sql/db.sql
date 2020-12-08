@@ -36,13 +36,14 @@ insert into equipe values(4356, 'RCS', 'La Meinau', 'Strasbourg', 0, 0, 0);
 create table rencontre(
     id_domicile int,
     id_visiteur int,
-    date_matche date,
+    date_match date,
     score_domicile int,
     score_visiteur int,
-    arbritre varchar(15),
+    arbitre varchar(15),
     etat varchar(10), --"à venir" / "en cours" (au cas ou on voudrait faire des matchs en live) / "passée"
     constraint pk_rencontre primary key(id_domicile, id_visiteur),
-    constraint fk_equipe foreign key(id_domicile, id_visiteur) references equipe(id_equipe)
+    constraint fk_dom_equipe foreign key(id_domicile) references equipe(id_equipe),
+	constraint fk_vis_equipe foreign key(id_visiteur) references equipe(id_equipe)
 );
 
 --Insert rencontre
