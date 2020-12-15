@@ -9,19 +9,16 @@
     <title>Ligue 1</title>
     <?php
     include('header.php');
-    include('./db_connect.php');
     include('./db_requests.php');
     ?>
 </head>
 
 <body>
-    <!-- <ul class="collection with-header">
-            </ul> -->
     <ul class="collection with-header">
         <?php
         $matches = executeReq($cnx, "select * from rencontre order by date_match");
         $currDate = '1';
-        for ($i; $i < $matches->rowCount(); $i++) {
+        for ($i = 0; $i < $matches->rowCount(); $i++) {
             $line = $matches->fetch();
             //$currDate = $line['date_match'];
             if ($line['date_match'] == $currDate) {

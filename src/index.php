@@ -19,5 +19,4 @@
     include("php/footer.php");
     ?>
 </footer>
-
 </html>
