@@ -1,0 +1,42 @@
+#table-ranking {
+    border: none;
+    border-collapse: collapse;
+    #ranking-head {
+        th {
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            border-radius: 0px;
+        }
+    }
+    #gold {
+        background-color: rgb(252, 253, 201);
+    }
+
+    #silver {
+        background-color: rgb(224, 245, 247);
+    }
+
+    #bronze {
+        background-color: rgb(243, 177, 147);
+    }
+    .ranking-cell {
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        border-radius: 0px;
+    }
+}
+
+@media screen and (max-width: 993px) {
+    #table-ranking {
+        border: none;
+        border-collapse: collapse;
+        #ranking-head {
+            th {
+                border: none;
+            }
+        }
+        .ranking-cell {
+            border: none;
+        }
+    }
+}

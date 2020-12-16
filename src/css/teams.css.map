@@ -1,8 +1,8 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACP,KAAK,EAAE,IAAI;CACd;;AAED,AAAA,UAAU,CAAC;EACP,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;CAOhB;;AAZD,AAMI,UANM,CAMN,KAAK,CAAC;EACF,YAAY,EAAE,GAAG;CACpB;;AARL,AASI,UATM,CASN,MAAM,CAAC;EACH,WAAW,EAAE,GAAG;CACnB",
     "sources": [
-        "teams.sass"
+        "teams.scss"
     ],
     "names": [],
     "file": "teams.css"

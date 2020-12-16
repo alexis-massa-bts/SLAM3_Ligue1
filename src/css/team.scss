@@ -1,0 +1,39 @@
+.container {
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+    margin: 5px;
+    border: 5px solid rgb(241, 117, 117);
+    border-radius: 20px;
+    .left {
+        justify-content: center;
+        border-right: 1px solid lightgrey;
+        padding-right: 20px;
+        #team-logo {
+            width: 300px;
+        }
+    }
+    .right {
+        width: auto;
+        justify-content: center;
+        padding-left: 20px;
+        #name {
+            font-size: xx-large;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        #city {
+            font-size: x-large;
+            a {
+                text-decoration: underline;
+            }
+        }
+        #stadium {
+            font-size: x-large;
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}

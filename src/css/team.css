@@ -1,0 +1,58 @@
+.container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin: 5px;
+  border: 5px solid #f17575;
+  border-radius: 20px;
+}
+
+.container .left {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid lightgrey;
+  padding-right: 20px;
+}
+
+.container .left #team-logo {
+  width: 300px;
+}
+
+.container .right {
+  width: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 20px;
+}
+
+.container .right #name {
+  font-size: xx-large;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.container .right #city {
+  font-size: x-large;
+}
+
+.container .right #city a {
+  text-decoration: underline;
+}
+
+.container .right #stadium {
+  font-size: x-large;
+}
+
+.container .right #stadium a {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=team.css.map */

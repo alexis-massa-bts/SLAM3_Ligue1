@@ -20,18 +20,25 @@
         $line = $teams->fetch();
     ?>
         <div class="row card-div">
-            <div class="col s12 m4 card-box">
+            <div class="col s12 m3 l4 card-box">
                 <div class="card blue-grey darken-1">
-                    <div class="card-content white-text">
-                        <span class="card-title"><?php echo $line['nom']; ?></span>
-                        <div class="card_info"><label for="stade">Stade : </label><span name="stade"><?php echo $line['stade']; ?></span></div>
-                    </div>
+                    <a href="<?php echo './team.php?nom=' . $line['nom'] ?>">
+                        <div class="card-flex card-content white-text">
+                            <div class="left">
+                                <img class="team-logo" src="<?php echo $line['image'] ?>" />
+                            </div>
+                            <div class="right">
+                                <span class="card-title"><?php echo $line['nom']; ?></span>
+                                <div class="card_info"><label for="stade">Stade : </label><span name="stade"><?php echo $line['stade']; ?></span></div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
-    <?php
+        <?php
     }
-    ?>
+        ?>
+        </div>
 </body>
 <footer>
     <?php
