@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="../css/materialize.min.css">
     <link rel="stylesheet" href="../css/ranking.css" />
-    <title>Ligue 1</title>
+    <title>Ligue 1 - Classement</title>
     <?php
     include("header.php");
     include("db_requests.php");
@@ -84,6 +84,20 @@
                         <td class="ranking-cell"><?php echo $line['taken'] ?></td>
                     </tr>
                 <?php
+                } else if($line['points']==0) {
+                ?>
+                    <tr class="ranking-row">
+                        <td class="ranking-cell"><?php echo 'Non Classé' ?></td>
+                        <td class="ranking-cell"><?php echo $line['nom'] ?></td>
+                        <td class="ranking-cell"><?php echo $line['points'] ?></td>
+                        <td class="ranking-cell"><?php echo $line['played'] ?></td>
+                        <td class="ranking-cell"><?php echo $line['won'] ?></td>
+                        <td class="ranking-cell"><?php echo $line['draw'] ?></td>
+                        <td class="ranking-cell"><?php echo $line['lost'] ?></td>
+                        <td class="ranking-cell"><?php echo $line['scored'] ?></td>
+                        <td class="ranking-cell"><?php echo $line['taken'] ?></td>
+                    </tr>
+            <?php
                 } else {
                 ?>
                     <tr class="ranking-row">

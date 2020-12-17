@@ -1,7 +1,32 @@
+#back {
+  font-size: x-large;
+  text-decoration: underline;
+  color: black;
+  position: absolute;
+  top: 80px;
+  right: 10px;
+}
+
+#back:hover {
+  font-weight: bold;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (45%)[2];
+      grid-template-columns: repeat(2, 45%);
+  -ms-grid-rows: 200px, 400px;
+      grid-template-rows: 200px, 400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+}
+
 .container {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 90%;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,7 +39,20 @@
   border-radius: 20px;
 }
 
-.container .left {
+.card-title {
+  font-size: xx-large;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#top-left {
+  -ms-grid-column: 1;
+  grid-column: 1/1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+#top-left .left {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -22,11 +60,11 @@
   padding-right: 20px;
 }
 
-.container .left #team-logo {
+#top-left .left #team-logo {
   width: 300px;
 }
 
-.container .right {
+#top-left .right {
   width: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -34,25 +72,116 @@
   padding-left: 20px;
 }
 
-.container .right #name {
-  font-size: xx-large;
+#top-left .right #city {
+  font-size: x-large;
+}
+
+#top-left .right #city a {
+  text-decoration: underline;
+}
+
+#top-left .right #stadium {
+  font-size: x-large;
+}
+
+#top-left .right #stadium a {
+  text-decoration: underline;
+}
+
+#top-right {
+  -ms-grid-column: 2;
+  grid-column: 2/2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#top-right .top {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 20px;
+}
+
+#top-right .bottom {
+  width: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20px;
+}
+
+#top-right .bottom .card-info {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+#bottom {
+  margin: 25px auto auto auto;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: scroll;
+  height: 500px;
+}
+
+#bottom .top {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 20px;
+}
+
+#bottom .bottom {
+  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20px;
+}
+
+#bottom .bottom .list .collection-item {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#bottom .bottom .list .collection-item .left {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid lightgrey;
+  padding-right: 20px;
   font-weight: bold;
-  text-decoration: underline;
 }
 
-.container .right #city {
-  font-size: x-large;
+#bottom .bottom .list .collection-item .right {
+  width: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 20px;
 }
 
-.container .right #city a {
-  text-decoration: underline;
-}
-
-.container .right #stadium {
-  font-size: x-large;
-}
-
-.container .right #stadium a {
-  text-decoration: underline;
+@media screen and (max-width: 993px) {
+  .grid {
+    display: block;
+  }
 }
 /*# sourceMappingURL=team.css.map */

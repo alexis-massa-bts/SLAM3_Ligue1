@@ -1,11 +1,42 @@
+#back {
+    font-size: x-large;
+    text-decoration: underline;
+    color: black;
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    &:hover {
+        font-weight: bold;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    grid-template-rows: 200px, 400px;
+    justify-content: center;
+    column-gap: 50px;
+}
+
 .container {
-    width: fit-content;
+    width: 90%;
     padding: 10px;
     display: flex;
     justify-content: left;
     margin: 5px;
     border: 5px solid rgb(241, 117, 117);
     border-radius: 20px;
+}
+
+.card-title {
+    font-size: xx-large;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#top-left {
+    grid-column: 1/1;
+    grid-row: 1;
     .left {
         justify-content: center;
         border-right: 1px solid lightgrey;
@@ -18,11 +49,6 @@
         width: auto;
         justify-content: center;
         padding-left: 20px;
-        #name {
-            font-size: xx-large;
-            font-weight: bold;
-            text-decoration: underline;
-        }
         #city {
             font-size: x-large;
             a {
@@ -35,5 +61,66 @@
                 text-decoration: underline;
             }
         }
+    }
+}
+#top-right {
+    grid-column: 2/2;
+    grid-row: 1;
+    flex-direction: column;
+    .top {
+        justify-content: center;
+        border-bottom: 1px solid lightgrey;
+        padding-bottom: 20px;
+    }
+    .bottom {
+        width: auto;
+        justify-content: center;
+        padding-top: 20px;
+        .card-info {
+            font-size: larger;
+            font-weight: bolder;
+        }
+    }
+}
+#bottom {
+    margin: 25px auto auto auto;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 500px;
+    .top {
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+    .bottom {
+        width: 50%;
+        justify-content: center;
+        padding-top: 20px;
+        .list {
+            .collection-item {
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .left {
+                    justify-content: center;
+                    border-right: 1px solid lightgrey;
+                    padding-right: 20px;
+                    font-weight: bold;
+                }
+                .right {
+                    width: auto;
+                    justify-content: center;
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 993px) {
+    .grid {
+        display: block;
     }
 }

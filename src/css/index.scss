@@ -1,0 +1,38 @@
+.grid-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    grid-template-rows: repeat(2, 400px);
+    justify-content: center;
+    a{}
+    .grid-box {
+        margin: 20px;
+        border: 5px solid rgb(241, 117, 117);
+        border-radius: 20px;
+    }
+    #tl {
+        grid-column: 1/1;
+        grid-row: 1;
+    }
+    #tr {
+        grid-column: 2/2;
+        grid-row: 1;
+    }
+    #bl {
+        grid-column: 1/1;
+        grid-row: 2;
+    }
+    #br {
+        grid-column: 2/2;
+        grid-row: 2;
+    }
+}
+
+@media screen and (max-width: 993px) {
+    .grid-container {
+        display: block;
+        .grid-box {
+            height: 100px;
+        }
+    }
+}

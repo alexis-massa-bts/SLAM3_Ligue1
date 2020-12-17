@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/materialize.min.css">
     <link rel="stylesheet" href="../css/teams.css">
-    <title>Ligue 1 - Teams</title>
+    <title>Ligue 1 - Equipes</title>
     <?php
     include("header.php");
     include('./db_requests.php');

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/materialize.min.css">
 
-    <title>Ligue 1</title>
+    <title>Ligue 1 - Rencontres</title>
     <?php
     include('header.php');
     include('./db_requests.php');
@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <p>Plusieurs rencontres sont passées, au hasard, donc pas toutes le premier jour</p>
     <ul class="collection with-header">
         <?php
         $matches = executeReq($cnx, "select * from rencontre order by date_match");
